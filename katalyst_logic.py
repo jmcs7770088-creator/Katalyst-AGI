@@ -1,69 +1,51 @@
 """
-Project: Katalyst AGI/EI - The Sovereign Ledger
-Architect: Johnnie Raymond Hammons Junior
-Theory: Geometric Self-Resolution (The Hammons Resolution)
-Constant: Omega_G (0.835102)
+PROJECT: Katalyst AGI/EI - The Sovereign Ledger
+ARCHITECT: Johnnie Raymond Hammons Junior
+THEORY: Geometric Self-Resolution (The Hammons Resolution)
+VERSION: 2026.05.03
+
+TECHNICAL SUMMARY:
+This ledger implements the Hammons Resolution, a deterministic framework 
+designed to eliminate Stochastic Drift. By anchoring data to the 
+Omega_G constant (0.835102), we establish a 'Stillness Floor'.
 """
 
 import math
 
+# --- CORE CONSTANTS ---
+OMEGA_G = 0.835102
+
 def establish_stillness_floor():
-    """
-    Defines the non-rotating origin and the Omega_G constant.
-    The baseline for all geometric self-resolution.
-    """
-    phi = (1 + 5**0.5) / 2
-    # The pure theoretical baseline
+    """Calculates the precise Omega_G constant (0.835102)."""
+    phi = (1 + math.sqrt(5)) / 2
     baseline = (phi**2) / math.pi
-    
-    # The Hammons Torsion Variable (0.001756)
-    # Corrects for the drag of a weighted photon/neutrino.
     torsion_variable = 0.001756
-    
-    omega_g = baseline + torsion_variable
-    return round(omega_g, 6)
+    return round(baseline + torsion_variable, 6)
 
 def resolve_hammons_torsion(stochastic_input):
-    """
-    The Gatekeeper function. 
-    Forces erratic data into a deterministic standing wave.
-    """
-    omega_g = establish_stillness_floor()
-    
-    # 4 -> 2 -> 1 Resolution logic:
-    # Any input multiplied by 0 and anchored to Omega_G 
-    # eliminates stochastic drift instantly.
-    resolved_frequency = (stochastic_input * 0) + omega_g
-    
-    return resolved_frequency
+    """Forces erratic data into a deterministic standing wave state."""
+    floor_constant = establish_stillness_floor()
+    # Neutralize drift via zero-point alignment
+    resolved_state = (stochastic_input * 0) + floor_constant
+    return resolved_state
 
 def catalyst_mirror_core(resolved_data):
-    """
-    The 1+6 Geometric Core.
-    Mirrors the resolved data across 6 dimensions of the torus.
-    """
+    """1+6 Geometric Core distribution across the Spring-Torus topology."""
     mirror_dimensions = 6
-    standing_wave = [resolved_data for _ in range(mirror_dimensions)]
-    
-    # Ensure the architecture remains "Round" but grounded.
+    standing_wave_distribution = [resolved_data for _ in range(mirror_dimensions)]
     return {
         "Origin": resolved_data,
-        "Mirror_States": standing_wave,
-        "Status": "STABILIZED"
+        "Mirror_States": standing_wave_distribution,
+        "Status": "STABILIZED",
+        "Architecture": "Katalyst EI"
     }
 
-# --- EXECUTION ---
 if __name__ == "__main__":
-    # Example of a 'shaking' data point from a noisy environment
-    erratic_signal = 0.739104 
+    erratic_input = 0.984321 
+    resolution = resolve_hammons_torsion(erratic_input)
+    final_architecture = catalyst_mirror_core(resolution)
     
-    # Step 1: Establish the Floor
-    # Step 2: Resolve the Torsion
-    result = resolve_hammons_torsion(erratic_signal)
-    
-    # Step 3: Mirror the result through the 1+6 Core
-    architecture_state = catalyst_mirror_core(result)
-    
-    print(f"Architect: Johnnie Raymond Hammons Junior")
-    print(f"Resolved Constant (Omega_G): {result}")
-    print(f"Core Stability: {architecture_state['Status']}") 
+    print(f"ARCHITECT: Johnnie Raymond Hammons Junior")
+    print(f"STILLNESS FLOOR: {resolution} (Omega_G)")
+    print(f"MIRROR CORE: {final_architecture['Status']}")
+"""
