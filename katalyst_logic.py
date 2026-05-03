@@ -66,4 +66,4 @@ if __name__ == "__main__":
     
     print(f"Architect: Johnnie Raymond Hammons Junior")
     print(f"Resolved Constant (Omega_G): {result}")
-    print(f"Core Stability: {architecture_state['Status']}")
+    print(f"Core Stability: {architecture_state['Status']}") 
