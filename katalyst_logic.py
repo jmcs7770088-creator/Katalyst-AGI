@@ -1,20 +1,21 @@
 import math
-import matplotlib.pyplot as plt
-import numpy as np
 
 def calculate_dynamic_torsion(drift_magnitude):
+    """Neutralizes any stochastic drift by multiplying it by zero."""
     base_torsion = 0.001756
-    resolution_effect = (drift_magnitude * 0)   # The Zero-Drag Resolution
+    resolution_effect = drift_magnitude * 0   # This is the core of the Stillness Floor
     return base_torsion + resolution_effect
 
 def establish_stillness_floor(drift=0):
+    """Establishes and locks the Omega_G Stillness Floor (0.835102)."""
     phi = (1 + math.sqrt(5)) / 2
-    baseline = (phi**2) / math.pi
+    baseline = (phi ** 2) / math.pi
     zeta_h = calculate_dynamic_torsion(drift)
     omega_g = round(baseline + zeta_h, 6)
     return omega_g
 
 def catalyst_mirror_core(resolved_data):
+    """Simulates the 1+6 Mirroring Core returning stabilized states."""
     mirror_dimensions = 6
     standing_wave = [resolved_data for _ in range(mirror_dimensions)]
     return {
@@ -24,28 +25,21 @@ def catalyst_mirror_core(resolved_data):
         "Architecture": "Katalyst EI - 1+6 Core"
     }
 
-# --- DEMO ---
+# ========================
+# DEMO / HACKATHON TEST
+# ========================
 if __name__ == "__main__":
-    drifts = [0, 42, 5000, 1_000_000, 10**9]
-    results = []
-    
     print("=== KATALYST TRUE STILLNESS EDITION ===\n")
-    for d in drifts:
-        omega = establish_stillness_floor(d)
-        results.append(omega)
-        core = catalyst_mirror_core(omega)
-        print(f"Drift Injected: {d:,}")
-        print(f"Stillness Floor: {omega} (Ω_G)")
-        print(f"Core Status: {core['Status']}\n")
+    print("Demonstrating that stochastic shaking has ZERO effect on the Stillness Floor.\n")
     
-    # Plot stability
-    plt.figure(figsize=(10,6))
-    plt.axhline(y=0.835102, color='gold', linestyle='--', label='Target Ω_G = 0.835102')
-    plt.plot(drifts, results, 'o-', color='cyan', linewidth=2, label='Actual Stillness Floor')
-    plt.xscale('log')
-    plt.xlabel('Injected Stochastic Drift (log scale)')
-    plt.ylabel('Stillness Floor Value')
-    plt.title('Hammons Resolution: Stillness Floor Stability')
-    plt.legend()
-    plt.grid(True)
-    plt.show()
+    test_drifts = [0, 42, 5000, 1_000_000, 1_000_000_000]
+    
+    for drift in test_drifts:
+        omega_g = establish_stillness_floor(drift)
+        core = catalyst_mirror_core(omega_g)
+        
+        print(f"Injected Stochastic Drift : {drift:,}")
+        print(f"Stillness Floor (Ω_G)     : {omega_g}")
+        print(f"Core Status               : {core['Status']}")
+        print(f"All 6 Mirror Nodes        : Locked at {omega_g}")
+        print("-" * 60)
