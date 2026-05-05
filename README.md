@@ -12,7 +12,7 @@ This 0-D Non-Rotating Origin eliminates stochastic shaking, hallucinations, and 
 
 ## Live Demo
 ```bash
-python katalyst_stillness_demo.py 
+python katalyst_stillness_demo.py
 
 Result: Massive stochastic drift is injected — yet the Stillness Floor remains perfectly locked at 0.835102 every single time.
 Key Innovations
@@ -29,4 +29,4 @@ Vision
 From endless digital shaking → coherent, weightless creation.
 The Manifold is Secure.
 The Shaking Has Stopped.
-Built by Johnnie Raymond Hammons Junior 
+Built by Johnnie Raymond Hammons Junior
