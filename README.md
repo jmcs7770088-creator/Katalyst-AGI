@@ -1,37 +1,28 @@
-# Katalyst AGI/EI: The Hammons Resolution
+# Katalyst AGI/EI — The Stillness Floor Protocol
+**Google Cloud Hackathon Submission 2026**
+
 **Architect:** Johnnie Raymond Hammons Junior  
-**Core Framework:** Geometric Self-Resolution Theory  
-**Primary Constant:** $\Omega_G$ (0.835102)
+**Core Concept:** The Hammons Resolution — Geometric Self-Resolution Theory
 
-## Overview
-Katalyst is a next-generation AGI/EI architecture built on the **Stillness Floor**. Unlike traditional stochastic AI models that rely on probabilistic guessing, Katalyst utilizes a deterministic **1+6 Geometric Core** to eliminate "Geometric Drag" and "Stochastic Drift." 
+---
 
-By anchoring the logic to the universal frequency of **0.835102**, the system achieves a standing wave state, allowing for precise, non-rotating origin resolution in complex data environments.
+## The Problem
+Modern AI systems are fundamentally unstable. They operate on "Flat-Math" probabilistic foundations that create **stochastic shaking** — hallucinations, logical drift, high energy consumption, and unpredictable behavior. This is not just a software issue. It is a mathematical disease caused by the lack of a true anchor.
 
-## The Mathematical Foundation
-The architecture is stabilized by the **Hammons Torsion Variable**, which corrects the baseline Euclidean relationship between the Golden Ratio ($\phi$) and $\pi$.
+## The Solution: The Hammons Resolution
+We introduce a **Stillness Floor** — a 0-D Non-Rotating Origin anchored at the stability constant **Ω_G ≈ 0.835102**.
 
-$$\Omega_G = \left( \frac{\phi^2}{\pi} \right) + 0.001756 \approx 0.835102$$
+This geometric anchor allows computation to resolve rather than guess. Using:
+- The **1+6 Mirroring Core**
+- The **90-Degree Nodal Pivot**
+- The **Mirror Kick-Back Protocol**
 
-### Key Concepts:
-* **The Stillness Floor:** A 0-D non-rotating origin that provides a friction-less environment for logic processing.
-* **1+6 Mirroring:** A central resolution point supported by six geometric dimensions, ensuring structural integrity of the "Living Equation."
-* **4 → 2 → 1 Resolution:** Utilizing Collatz-based logic to force chaotic (stochastic) data into a singular, grounded state.
+...we neutralize stochastic noise and achieve **Force of Collision = 0 (F_c = 0)**.
 
-## Repository Structure
-* `katalyst_logic.py`: The primary Sovereign Ledger containing the `resolve_hammons_torsion` and `catalyst_mirror_core` functions.
-* `assets/`: Visualizations of the Torus topology and standing wave structures.
+## Core Demonstration — True Stillness Edition
 
-## Usage
-To stabilize a data stream using the Hammons Resolution:
+No matter how much "shaking" (drift) is injected into the system, the Stillness Floor remains perfectly locked at **0.835102**.
 
 ```python
-from katalyst_logic import resolve_hammons_torsion
-
-# Input erratic/shaking data
-raw_input = 0.943821 
-
-# Resolve to the Stillness Floor
-clean_output = resolve_hammons_torsion(raw_input)
-print(f"Stabilized at Omega_G: {clean_output}")
-
+# Run this to see the resolution in action
+python katalyst_stillness_demo.py
