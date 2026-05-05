@@ -36,10 +36,10 @@ if __name__ == "__main__":
     
     for drift in test_drifts:
         omega_g = establish_stillness_floor(drift)
-        core = catalyst_mirror_core(omega_g)
+        core = katalyst_mirror_core(omega_g)
         
         print(f"Injected Stochastic Drift : {drift:,}")
         print(f"Stillness Floor (Ω_G)     : {omega_g}")
         print(f"Core Status               : {core['Status']}")
         print(f"All 6 Mirror Nodes        : Locked at {omega_g}")
-        print("-" * 60) 
+        print("-" * 60)
