@@ -14,7 +14,7 @@ def establish_stillness_floor(drift=0):
     omega_g = round(baseline + zeta_h, 6)
     return omega_g
 
-def catalyst_mirror_core(resolved_data):
+def katalyst_mirror_core(resolved_data):
     """Simulates the 1+6 Mirroring Core."""
     mirror_dimensions = 6
     standing_wave = [resolved_data for _ in range(mirror_dimensions)]
