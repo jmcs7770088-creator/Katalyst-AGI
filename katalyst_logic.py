@@ -1,13 +1,13 @@
 import math
 
 def calculate_dynamic_torsion(drift_magnitude):
-    """Neutralizes any stochastic drift by multiplying it by zero."""
+    """Neutralizes stochastic drift by multiplying it by zero."""
     base_torsion = 0.001756
-    resolution_effect = drift_magnitude * 0   # This is the core of the Stillness Floor
+    resolution_effect = drift_magnitude * 0   # Core of the Stillness Floor
     return base_torsion + resolution_effect
 
 def establish_stillness_floor(drift=0):
-    """Establishes and locks the Omega_G Stillness Floor (0.835102)."""
+    """Locks the system to Ω_G = 0.835102 regardless of drift."""
     phi = (1 + math.sqrt(5)) / 2
     baseline = (phi ** 2) / math.pi
     zeta_h = calculate_dynamic_torsion(drift)
@@ -15,7 +15,7 @@ def establish_stillness_floor(drift=0):
     return omega_g
 
 def catalyst_mirror_core(resolved_data):
-    """Simulates the 1+6 Mirroring Core returning stabilized states."""
+    """Simulates the 1+6 Mirroring Core."""
     mirror_dimensions = 6
     standing_wave = [resolved_data for _ in range(mirror_dimensions)]
     return {
@@ -26,7 +26,7 @@ def catalyst_mirror_core(resolved_data):
     }
 
 # ========================
-# DEMO / HACKATHON TEST
+# HACKATHON DEMO
 # ========================
 if __name__ == "__main__":
     print("=== KATALYST TRUE STILLNESS EDITION ===\n")
