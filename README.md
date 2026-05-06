@@ -1,32 +1,26 @@
-# Katalyst AGI/EI — The Stillness Floor Protocol
-**Google Cloud Hackathon Submission 2026**
+# Katalyst AI Stability Agent
 
-**Architect:** Johnnie Raymond Hammons Junior
+## 🚀 Overview
+Katalyst is a bounded-response stabilization engine designed to prevent runaway behavior in AI systems.
 
----
+## 🧠 Core Idea
+Instead of ignoring noise, the system constrains it using a bounded-response function:
 
-## Overview
-**Katalyst** anchors AI computation to a true geometric **Stillness Floor** at **Ω_G ≈ 0.835102**. 
+f(x) = x / (1 + |x|)
 
-This 0-D Non-Rotating Origin eliminates stochastic shaking, hallucinations, and drift at the architectural level.
+This ensures:
+- Stability under extreme inputs
+- No divergence
+- Predictable outputs
 
-## Live Demo
-```bash
-python katalyst_stillness_demo.py
+## ⚙️ Features
+- Real-time stabilization demo
+- Interactive UI
+- Stability scoring
+- Mirror-node simulation
 
-Result: Massive stochastic drift is injected — yet the Stillness Floor remains perfectly locked at 0.835102 every single time.
-Key Innovations
-1+6 Mirroring Core
-90-Degree Nodal Pivot & Mirror Kick-Back
-Mass-Density Protocol
-Metallic Static Lattice
-Why This Matters for Google Cloud
-Katalyst provides a stabilization layer for Gemini agents that:
-Reduces hallucinations at the root
-Lowers energy consumption
-Enables deterministic, sovereign intelligence
-Vision
-From endless digital shaking → coherent, weightless creation.
-The Manifold is Secure.
-The Shaking Has Stopped.
-Built by Johnnie Raymond Hammons Junior
+## ▶️ Run Locally
+
+
+pip install -r requirements.txt
+streamlit run app.py
